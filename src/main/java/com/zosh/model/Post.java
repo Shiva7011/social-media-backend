@@ -49,7 +49,7 @@ public class Post {
 	private User user;
 	
 	@OneToMany
-	private List<Comments> comments=new ArrayList<Comments>();
+	private List<Comments> comments=new ArrayList<>();
 	
 	@ManyToMany
 	private Set<User> liked= new HashSet<>(); 

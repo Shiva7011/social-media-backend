@@ -28,9 +28,6 @@ public class ChatServiceImplementation implements ChatService {
 
 	@Override
 	public Chat createChat(Integer reqUserId, Integer userId2, boolean isGroup) throws UserException {
-		
-		
-		
 		User reqUser=userService.findUserById(reqUserId);
 		User user2 = userService.findUserById(userId2);
 		
@@ -53,14 +50,9 @@ public class ChatServiceImplementation implements ChatService {
 		
 //		System.out.println("chat ----------------------------- "+chat);
 		Chat createdChat = chatRepo.save(chat);
-		
-//		
-		
+
 		return createdChat;
 	}
-
-	
-	
 
 	@Override
 	public Chat findChatById(Integer chatId) throws ChatException {
@@ -75,16 +67,9 @@ public class ChatServiceImplementation implements ChatService {
 
 	@Override
 	public List<Chat> findAllChatByUserId(Integer userId) throws UserException {
-		
-		
-		
 		List<Chat> chats=chatRepo.findChatByUserId(userId);
-		
-	
-		
 		return chats;
 	}
-	
 	@Override
 	public Chat deleteChat(Integer chatId, Integer userId) throws ChatException, UserException {
 		

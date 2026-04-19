@@ -65,8 +65,6 @@ public class UserController {
 		ApiResponse res=new ApiResponse("follow",true);
 		return new ResponseEntity<>(res,HttpStatus.OK);
 	}
-
-	
 	
 	@GetMapping("/search")
 	public ResponseEntity<List<UserDto>> searchUserHandler(@RequestParam("q")String query) throws UserException{

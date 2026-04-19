@@ -1,13 +1,7 @@
 package com.zosh.dto;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
-
-import com.zosh.model.User;
-
 
 import lombok.Data;
 
@@ -27,7 +21,7 @@ public class UserProfileDto {
 	
 	private List<UserDto> follower = new ArrayList<>();
 	
-	private List<User> following = new ArrayList<>();
+	private List<UserDto> following = new ArrayList<>();
 
 	private List<StoryDto> stories = new ArrayList<>();
 	

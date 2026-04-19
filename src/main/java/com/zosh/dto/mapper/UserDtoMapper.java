@@ -32,6 +32,8 @@ public class UserDtoMapper {
 		
 		userDto.setReposts(reposts);
 		userDto.setSavedPosts(savedPost);
+		userDto.setFollower(userDTOS(new ArrayList<>(user.getFollower())));
+		userDto.setFollowing(userDTOS(new ArrayList<>(user.getFollowing())));
 		
 //		userDto.setStories(null);
 //		userDto.setReels(null);

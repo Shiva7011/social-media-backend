@@ -2,19 +2,17 @@ package com.zosh.dto;
 
 import java.time.LocalDateTime;
 
-import com.zosh.model.User;
+import com.zosh.model.StoryMediaType;
 
-import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
 public class StoryDto {
 
-	private Integer id;
-	private User user;
-	private String image;
+	private Long id;
+	private Integer userId;
+	private String mediaUrl;
+	private StoryMediaType mediaType;
 	private String captions;
-	private LocalDateTime timestamp;
-	
+	private LocalDateTime createdAt;
 }
